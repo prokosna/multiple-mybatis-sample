@@ -10,9 +10,10 @@
             price int          not null
         )
     </update>
-    <select id="getAll" resultType="xyz.prokosna.multiple_mybatis_sample.domain.model.Item">
+    <select id="getAll" resultType="xyz.prokosna.multiple_mybatis_sample.domain.model.Item" resultOrdered="true">
         select *
         from items
+        order by id
     </select>
     <select id="getById" resultType="xyz.prokosna.multiple_mybatis_sample.domain.model.Item">
         select *
