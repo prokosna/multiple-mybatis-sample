@@ -1,0 +1,17 @@
+datasource:
+  db1:
+    hikari:
+      jdbcUrl: jdbc:mysql://localhost:3306/mysql
+      username: mysql
+      password: pass
+    mybatis:
+      config-location: classpath:mybatis-config-db1.xml
+      mapper-locations: classpath:mybatis/db1/**/*.xml
+  db2:
+    hikari:
+      jdbcUrl: jdbc:postgresql://localhost:5432/postgres
+      username: postgres
+      password: pass
+    mybatis:
+      config-location: classpath:mybatis-config-db2.xml
+      mapper-locations: classpath:mybatis/db2/**/*.xml
