@@ -1,4 +1,4 @@
-package xyz.prokosna.multiple_mybatis_sample.infra.config;
+package xyz.prokosna.multiple_mybatis_sample.config;
 
 import com.zaxxer.hikari.HikariDataSource;
 import lombok.RequiredArgsConstructor;
@@ -14,6 +14,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
+import org.springframework.transaction.PlatformTransactionManager;
 
 import javax.sql.DataSource;
 
@@ -44,7 +45,7 @@ public class Db2Config {
   }
 
   @Bean(name = TRANSACTION_MANAGER)
-  public DataSourceTransactionManager dataSourceTransactionManager(
+  public PlatformTransactionManager platformTransactionManager(
       @Qualifier(DATASOURCE) DataSource dataSource) {
     return new DataSourceTransactionManager(dataSource);
   }

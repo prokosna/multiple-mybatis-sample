@@ -4,12 +4,12 @@ import lombok.RequiredArgsConstructor;
 import lombok.val;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import xyz.prokosna.multiple_mybatis_sample.config.Db1Config;
+import xyz.prokosna.multiple_mybatis_sample.config.Db2Config;
 import xyz.prokosna.multiple_mybatis_sample.domain.model.Item;
 import xyz.prokosna.multiple_mybatis_sample.domain.model.User;
 import xyz.prokosna.multiple_mybatis_sample.domain.repository.db1.ItemRepository;
 import xyz.prokosna.multiple_mybatis_sample.domain.repository.db2.UserRepository;
-import xyz.prokosna.multiple_mybatis_sample.infra.config.Db1Config;
-import xyz.prokosna.multiple_mybatis_sample.infra.config.Db2Config;
 
 import java.util.ArrayList;
 import java.util.Arrays;
